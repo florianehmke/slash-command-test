@@ -1,4 +1,4 @@
-name: rebase
+name: rebase-command
 on:
   repository_dispatch:
     types: [rebase-command]
