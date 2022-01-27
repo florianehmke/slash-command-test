@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: 'echo "payload: ${{ github.event.client_payload }}"'
+        if: github.event.client_payload != null
+
       - name: Add reaction
         uses: peter-evans/create-or-update-comment@v1
         with:
